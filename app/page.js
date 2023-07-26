@@ -1,95 +1,76 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import Link from "next/link";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      <div className={styles.login}>
+        {/* <div className={styles.logo}>NFT Market</div> */}
+        <div className={styles.container}>
+          <h1 className={styles.header}>NFT Access</h1>
+          <p className={styles.secondaryText}>
+            Please fill your detail to access your account.
+          </p>
+          <label for="email" className={styles.label}>
+            Email
+          </label>
+          <br />
+          <input
+            type="email"
+            id="email"
+            size="30"
+            placeholder=" Email Address"
+            required
+            className={styles.input}
+          ></input>
+          <br />
+          <label for="password" className={styles.label}>
+            Password
+          </label>
+          <br />
+          <input
+            type="password"
+            id="password"
+            size="30"
+            placeholder=" Password"
+            required
+            className={styles.input}
+          ></input>
+          <br />
+          <div className={styles.btmpart}>
+            <div className={styles.rmberme}>
+              <input type="checkbox" id="remember-me"></input>
+              <label for="remember-me">Remember Me</label>
+            </div>
+            <div className={styles.fgtpwd}>
+              <Link href="/">Forgot Password?</Link>
+            </div>
+          </div>
+          <br />
+          <div className={styles.btngroup}>
+            <button className={styles.mybutton1}>Sign In</button>
+            {/* <br /> */}
+            <button className={styles.mybutton}>Sign In with Google</button>
+            {/* <br /> */}
+            <p className={styles.signupbtn}>
+              Don’t have an account?{" "}
+              <Link href="/">
+                <span>Sign up</span>
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
+      <div className={styles.startupimg}>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src="/../public/images/image.png"
+          // sizes="(max-width:1200) 400"
+          width={736}
+          height={856}
+          alt="image of three cartoons"
         />
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
-  )
+  );
 }
