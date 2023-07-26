@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import image from "../public/images/image.png";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -63,8 +64,10 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.startupimg}>
+        {/* <img src={image} alt="Startup" /> */}
         <Image
-          src="/../public/images/image.png"
+          // src="/../public/images/image.png"
+          src={image}
           // sizes="(max-width:1200) 400"
           width={736}
           height={856}
