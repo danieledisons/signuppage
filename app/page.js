@@ -64,7 +64,7 @@ export default function Home() {
       </div>
       <div className={styles.startupimg}>
         <Image
-          src="/../public/images/image.png"
+          src="../public/images/image.png"
           // sizes="(max-width:1200) 400"
           width={736}
           height={856}
